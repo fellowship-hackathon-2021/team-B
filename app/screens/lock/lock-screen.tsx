@@ -2,7 +2,6 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { StyleSheet, ViewStyle, View, SafeAreaView} from "react-native"
 import { useNavigation } from "@react-navigation/native"
-// import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import {
   Button,
@@ -55,7 +54,7 @@ export const LockScreen = observer(function LockScreen() {
   return (
     <View style={styles.full}>
       <Screen style={styles.root} preset="scroll">
-        <Text preset="header" text="Boy" />
+        <Text preset="header" text="this actually the lock screen shh" />
       </Screen>
       <SafeAreaView style={styles.footerContainer}>
         <View style={styles.footerContent}>

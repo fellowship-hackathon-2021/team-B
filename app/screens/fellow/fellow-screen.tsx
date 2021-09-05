@@ -19,7 +19,7 @@ export const FellowScreen = observer(function FellowScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="" />
+      <Text preset="header" text="we a family here" />
     </Screen>
   )
 })
