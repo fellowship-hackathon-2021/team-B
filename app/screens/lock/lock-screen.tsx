@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle, View, SafeAreaView} from "react-native"
+import { StyleSheet, ViewStyle, View, SafeAreaView} from "react-native"
 import { useNavigation } from "@react-navigation/native"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
@@ -14,31 +14,35 @@ import {
 } from "../../components"
 import { color, spacing, typography } from "../../theme"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
-const TEXT: TextStyle = {
-  color: color.palette.white,
-  fontFamily: typography.primary,
-}
-const BOLD: TextStyle = { fontWeight: "bold" }
-const CONTINUE: ViewStyle = {
-  paddingVertical: spacing[4],
-  paddingHorizontal: spacing[4],
-  backgroundColor: color.palette.deepPurple,
-}
-const CONTINUE_TEXT: TextStyle = {
-  ...TEXT,
-  ...BOLD,
-  fontSize: 13,
-  letterSpacing: 2,
-}
-const FOOTER: ViewStyle = { backgroundColor: "#20162D" }
-const FOOTER_CONTENT: ViewStyle = {
-  paddingVertical: spacing[4],
-  paddingHorizontal: spacing[4],
-}
+const styles = StyleSheet.create({
+  root: {
+    backgroundColor: color.palette.black,
+    flex: 1,
+  },
+  full: {
+    flex: 1,
+  },
+  submitContainer: {
+    paddingVertical: 16,
+    paddingHorizontal: 16,
+    backgroundColor: color.palette.deepPurple,
+    alignItems: 'center',
+  },
+  submitText: {
+    color: color.palette.white,
+    fontFamily: typography.primary,
+    fontWeight: "bold",
+    fontSize: 13,
+    letterSpacing: 2,
+  },
+  footerContainer: {
+    backgroundColor: "#ffffff"
+  },
+  footerContent: {
+    paddingVertical: 16,
+    paddingHorizontal: 16,
+  }
+})
 
 export const LockScreen = observer(function LockScreen() {
   const navigation = useNavigation()
@@ -49,17 +53,17 @@ export const LockScreen = observer(function LockScreen() {
   // Pull in navigation via hook
   // const navigation = useNavigation()
   return (
-    <View>
-      <Screen style={ROOT} preset="scroll">
+    <View style={styles.full}>
+      <Screen style={styles.root} preset="scroll">
         <Text preset="header" text="Boy" />
       </Screen>
-      <SafeAreaView style={FOOTER}>
-        <View style={FOOTER_CONTENT}>
+      <SafeAreaView style={styles.footerContainer}>
+        <View style={styles.footerContent}>
           <Button
             testID="next-screen-button"
-            style={CONTINUE}
-            textStyle={CONTINUE_TEXT}
-            tx="welcomeScreen.continue"
+            style={styles.submitContainer}
+            textStyle={styles.submitText}
+            tx="lockScreen.submit"
             onPress={nextScreen}
           />
         </View>
