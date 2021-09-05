@@ -1,4 +1,6 @@
-export * from "./welcome/welcome-screen"
-export * from "./demo/demo-screen"
-export * from "./demo/demo-list-screen"
 // export other screens here
+export * from "./lock/lock-screen"
+export * from "./linkedin/linkedin-screen"
+export * from "./map/map-screen"
+export * from "./fellow/fellow-screen"
+export * from "./profile/profile-screen"
