@@ -1,7 +1,7 @@
-import React from "react"
+import * as React from 'react';
 import { observer } from "mobx-react-lite"
-import { StyleSheet, ViewStyle, View, SafeAreaView} from "react-native"
-import { useNavigation } from "@react-navigation/native"
+import { StyleSheet, ViewStyle, View, TextInput} from "react-native"
+import { useNavigation, useTheme} from "@react-navigation/native"
 // import { useStores } from "../../models"
 import {
   Button,
@@ -13,60 +13,86 @@ import {
 } from "../../components"
 import { color, spacing, typography } from "../../theme"
 
+const headstarterLogo = require("./headstarter.png")
+
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: color.palette.black,
+    backgroundColor: "#3d7ea4",
     flex: 1,
   },
   full: {
     flex: 1,
   },
-  submitContainer: {
-    paddingVertical: 16,
-    paddingHorizontal: 16,
-    backgroundColor: color.palette.deepPurple,
-    alignItems: 'center',
+  content: {
+    flex: 1,
+    padding: 16,
+    // justifyContent: 'center',
   },
-  submitText: {
-    color: color.palette.white,
-    fontFamily: typography.primary,
-    fontWeight: "bold",
-    fontSize: 13,
-    letterSpacing: 2,
+  input: {
+    margin: 8,
+    padding: 10,
+    borderRadius: 3,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: 'rgba(0, 0, 0, 0.08)',
   },
-  footerContainer: {
-    backgroundColor: "#ffffff"
+  button: {
+    margin: 8,
+    backgroundColor: "#c77457"
   },
-  footerContent: {
-    paddingVertical: 16,
-    paddingHorizontal: 16,
+  text: {
+    textAlign: 'center',
+    margin: 8,
+  },
+  logo: {
+    alignSelf: "center",
+    marginTop: 20,
+    maxWidth: "100%",
+    width: 200,
+    height: 200,
+    borderRadius: 10
   }
 })
+
+const AuthContext = React.createContext<{
+  signIn: () => void;
+}>({
+  signIn: () => {
+    throw new Error(AUTH_CONTEXT_ERROR);
+  },
+});
 
 export const LockScreen = observer(function LockScreen() {
   const navigation = useNavigation()
   const nextScreen = () => navigation.navigate('tabs')
-  // Pull in one of our MST stores
-  // const { someStore, anotherStore } = useStores()
 
-  // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const { signIn } = React.useContext(AuthContext);
+  const { colors } = useTheme();
+
   return (
     <View style={styles.full}>
       <Screen style={styles.root} preset="scroll">
-        <Text preset="header" text="this actually the lock screen shh" />
+        <Image source={headstarterLogo} style={styles.logo} />
+        <View style={styles.content}>
+        <TextInput
+          placeholder="Username"
+          style={[
+            styles.input,
+            { backgroundColor: colors.card, color: colors.text },
+          ]}
+        />
+        <TextInput
+          placeholder="Password"
+          secureTextEntry
+          style={[
+            styles.input,
+            { backgroundColor: colors.card, color: colors.text },
+          ]}
+        />
+        <Button mode="contained" onPress={nextScreen} style={styles.button}>
+          <Text> Sign In </Text>
+        </Button>
+      </View>
       </Screen>
-      <SafeAreaView style={styles.footerContainer}>
-        <View style={styles.footerContent}>
-          <Button
-            testID="next-screen-button"
-            style={styles.submitContainer}
-            textStyle={styles.submitText}
-            tx="lockScreen.submit"
-            onPress={nextScreen}
-          />
-        </View>
-      </SafeAreaView>
     </View>
   )
 })
