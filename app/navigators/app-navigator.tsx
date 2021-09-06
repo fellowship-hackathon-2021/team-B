@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { LockScreen, LinkedinScreen, FellowScreen, MapScreen, ProfileScreen } from "../screens"
+import { LockScreen, TwitterScreen, MapScreen, ProfileScreen, TabsScreen } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
 /**
@@ -25,8 +25,6 @@ import { navigationRef } from "./navigation-utilities"
  */
 export type NavigatorParamList = {
   lock: undefined
-  linkedin: undefined
-  fellow: undefined
   map: undefined
   profile: undefined
 }
@@ -43,8 +41,8 @@ const AppStack = () => {
       initialRouteName="lock"
     >
       <Stack.Screen name="lock" component={LockScreen} />
-      <Stack.Screen name="linkedin" component={LinkedinScreen} />
-      <Stack.Screen name="fellow" component={FellowScreen} />
+      <Stack.Screen name="tabs" component={TabsScreen} />
+      <Stack.Screen name="twitter" component={TwitterScreen} />
       <Stack.Screen name="map" component={MapScreen} />
       <Stack.Screen name="profile" component={ProfileScreen} />
     </Stack.Navigator>

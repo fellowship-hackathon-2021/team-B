@@ -11,7 +11,7 @@ const ROOT: ViewStyle = {
   flex: 1,
 }
 
-export const FellowScreen = observer(function FellowScreen() {
+export const TwitterScreen = observer(function TwitterScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
@@ -19,7 +19,7 @@ export const FellowScreen = observer(function FellowScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="we a family here" />
+      <Text preset="header" text="tweet lol" />
     </Screen>
   )
 })

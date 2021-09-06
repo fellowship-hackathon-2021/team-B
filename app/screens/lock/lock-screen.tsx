@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 
 export const LockScreen = observer(function LockScreen() {
   const navigation = useNavigation()
-  const nextScreen = () => navigation.navigate("linkedin")
+  const nextScreen = () => navigation.navigate('tabs')
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
