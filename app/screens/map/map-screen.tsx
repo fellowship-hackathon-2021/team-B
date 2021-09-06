@@ -40,16 +40,13 @@ const styles = StyleSheet.create({
 
 export const MapScreen = observer(function MapScreen() {
   const [locationServiceEnabled, setLocationServiceEnabled] = useState(false);
-  const [displayCurrentAddress, setDisplayCurrentAddress] = useState(
-    'Wait, we are fetching you location...'
-  );
   const [getLatitude, setLatitude] = useState(0);
   const [getLongitude, setLongitude] = useState(0);
 
   useEffect(() => {
   CheckIfLocationEnabled();
   GetCurrentLocation();
-}, []);
+  }, []);
 
   const CheckIfLocationEnabled = async () => {
     let enabled = await Location.hasServicesEnabledAsync();
