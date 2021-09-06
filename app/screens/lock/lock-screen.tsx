@@ -45,10 +45,10 @@ const styles = StyleSheet.create({
   },
   logo: {
     alignSelf: "center",
-    marginTop: 20,
+    marginVertical: 50,
     maxWidth: "100%",
-    width: 200,
-    height: 200,
+    width: "100%",
+    height: 100,
     borderRadius: 10
   }
 })
@@ -71,8 +71,8 @@ export const LockScreen = observer(function LockScreen() {
   return (
     <View style={styles.full}>
       <Screen style={styles.root} preset="scroll">
-        <Image source={headstarterLogo} style={styles.logo} />
         <View style={styles.content}>
+        <Image source={headstarterLogo} style={styles.logo} />
         <TextInput
           placeholder="Username"
           style={[
