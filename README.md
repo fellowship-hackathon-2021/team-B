@@ -16,12 +16,12 @@ The following **required** functionality is complete:
 ## Video Walkthrough
 
 ### Sign In Screen
-![](https://i.imgur.com/TiszUIE.gif)
+![](https://github.com/fellowship-hackathon-2021/team-B/blob/main/gifs/lockscreen.gif)
 
 ### Update Screen
 
 ### Map Screen
-
+![](https://github.com/fellowship-hackathon-2021/team-B/blob/main/gifs/mapscreen.gif)
 
 ### Profile Screen
 
