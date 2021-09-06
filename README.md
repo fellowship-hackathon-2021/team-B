@@ -7,7 +7,7 @@
 
 The following **required** functionality is complete:
 
-* [X] react-navigation is used to facilate the change in screens
+* [X] react-navigation is used to facilitate the change in screens
 * [X] mobx-react-lite is used for state management
 * [X] multiple screens are implemented to allow user to perform different actions
 * [X] additional npm packages are used (react-native-maps, expo-location)
@@ -21,12 +21,10 @@ The following **required** functionality is complete:
 ### Update Screen
 
 ### Map Screen
-![](https://i.imgur.com/sJx9vDA.gif)
+
 
 ### Profile Screen
 
 ## Team
 
 * Native and Frontend: **David Zhao**
-
-
