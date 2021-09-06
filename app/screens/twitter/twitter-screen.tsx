@@ -19,7 +19,7 @@ export const TwitterScreen = observer(function TwitterScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="tweet lol" />
+      <Text preset="header" text="twitter API stuff goes in this screen" />
     </Screen>
   )
 })

@@ -19,7 +19,7 @@ export const MapScreen = observer(function MapScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="map hehe" />
+      <Text preset="header" text="imagine a map here..." />
     </Screen>
   )
 })

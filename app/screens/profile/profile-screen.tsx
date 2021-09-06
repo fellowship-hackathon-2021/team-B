@@ -19,7 +19,7 @@ export const ProfileScreen = observer(function ProfileScreen() {
   // const navigation = useNavigation()
   return (
     <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="this yo profile bro" />
+      <Text preset="header" text="code the profile here" />
     </Screen>
   )
 })
