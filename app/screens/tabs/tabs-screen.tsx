@@ -12,8 +12,11 @@ import { HeaderBackButton, useHeaderHeight } from '@react-navigation/elements';
 
 const styles = {
   root: {
-    backgroundColor: color.palette.black,
+    backgroundColor: color.palette.white,
     flex: 1,
+  },
+  tabBar: {
+    backgroundColor: "#f4e4de"
   }
 }
 

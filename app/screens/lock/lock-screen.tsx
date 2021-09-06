@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: 8,
-    backgroundColor: "#c77457"
+    backgroundColor: "#c77457",
   },
   text: {
     textAlign: 'center',
