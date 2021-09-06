@@ -18,9 +18,15 @@ The following **required** functionality is complete:
 ### Sign In Screen
 ![](https://i.imgur.com/TiszUIE.gif)
 
+### Update Screen
+
 ### Map Screen
-![](https://i.imgur.com/T1Tuo57.gif)
+![](https://i.imgur.com/sJx9vDA.gif)
+
+### Profile Screen
 
 ## Team
 
 * Native and Frontend: **David Zhao**
+
+
