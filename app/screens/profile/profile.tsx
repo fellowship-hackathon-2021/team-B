@@ -16,6 +16,7 @@ export default class UserProfileView extends Component {
       technologies: ""
     };
   }
+  
   componentDidUpdate() {
     console.log(this.state.bio);
   }
