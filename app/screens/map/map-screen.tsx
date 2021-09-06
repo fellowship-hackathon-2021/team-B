@@ -35,8 +35,17 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
   },
+  userTitle: {
+    fontWeight: "bold",
+    fontSize: 16,
+
+  },
+  userDescription: {
+    fontSize: 12,
+  }
 })
 
+const pfp = require("./pfp.png")
 
 export const MapScreen = observer(function MapScreen() {
   const [locationServiceEnabled, setLocationServiceEnabled] = useState(false);
@@ -101,7 +110,14 @@ export const MapScreen = observer(function MapScreen() {
         coordinate={{
           latitude : getLatitude,
           longitude : getLongitude}}
+          image={pfp}
+          title={'test title'}
+          description={'test description'}
       >
+        <Callout>
+          <Text style={styles.userTitle}> Team B </Text>
+          <Text> Class of 2021</Text>
+        </Callout>
       </Marker>
       </MapView>
     </Screen>
