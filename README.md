@@ -28,3 +28,4 @@ The following **required** functionality is complete:
 ## Team
 
 * Native and Frontend: **David Zhao**
+* Frontend: **Atiar Rahman**
