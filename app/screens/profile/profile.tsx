@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 
 export default class UserProfileView extends Component {
-  constructor(props) {
+  state: { bio: string; education: string; technologies: string; };
+  constructor(props)  {
     super(props);
     this.state = {
       bio: "",
