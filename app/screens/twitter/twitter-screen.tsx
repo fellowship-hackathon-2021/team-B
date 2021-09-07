@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: color.palette.black,
     borderWidth: 1,
     height:40,
-    
+
   },
 
 
@@ -32,8 +32,8 @@ export const TwitterScreen = function TwitterScreen() {
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
-  const [text, onChangeText] = React.useState("Enter Hashtag or Keyword...");
- 
+  const [text, onChangeText] = React.useState("#theheadstarter");
+
 
   return (
     <Screen style={styles.input} preset="scroll">
@@ -42,12 +42,12 @@ export const TwitterScreen = function TwitterScreen() {
         onChangeText = {onChangeText}
         value = {text}
         onSubmitEditing={Keyboard.dismiss}
-      /> 
+      />
 
       <Button mode = "contianed" style={styles.button}>
           <Text> Find Tweets </Text>
       </Button>
-      
+
 
     </Screen>
   )
