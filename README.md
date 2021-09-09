@@ -13,6 +13,9 @@ The following **required** functionality is complete:
 * [X] additional npm packages are used (react-native-maps, expo-location)
 * [X] 4+ API calls are called using Twitter API, MapView API, Marker API, Callout API
 
+## Initial Design
+![](https://i.imgur.com/q8NN5r3.png)
+
 ## Video Walkthrough
 
 ### Sign In Screen
